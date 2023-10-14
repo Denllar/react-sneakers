@@ -22,8 +22,8 @@ function Header({ openDrawer }) {
                     <img width={18} height={18} src="img/cart.svg" alt="cart" />
                     <p className="ml-10">{totalPrice} руб</p>
                 </div>
-                <Link to="/favorites"><img className="mr-30 ml-30 cu-p" width={21} height={19} src="img/favorite.svg" alt="cart" /></Link>
-                <Link to="/orders"><img className="cu-p" width={20} height={20} src="img/user.svg" alt="userIcon " /></Link>
+                <Link to="/react-sneakers/favorites"><img className="mr-30 ml-30 cu-p" width={21} height={19} src="img/favorite.svg" alt="cart" /></Link>
+                <Link to="/react-sneakers/orders"><img className="cu-p" width={20} height={20} src="img/user.svg" alt="userIcon " /></Link>
             </div>
         </header>
     )
