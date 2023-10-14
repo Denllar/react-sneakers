@@ -8,7 +8,7 @@ function Header({ openDrawer }) {
     const {totalPrice} = useCart();
     return (
         <header className="d-flex justify-between align-center pt-40 pb-40">
-            <Link to="/react-sneakers" style={{ textDecoration: 'none' }}>
+            <Link to="/react-sneakers/" style={{ textDecoration: 'none' }}>
                 <div className="left d-flex align-center">
                     <img width={40} height={40} src="img/logo.svg" alt="logo" />
                     <div className="ml-15">
