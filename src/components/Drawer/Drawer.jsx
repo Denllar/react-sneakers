@@ -58,7 +58,7 @@ export default function Drawer({ closeDrawer, cartDrawer = [], onRemoveCart, ope
                             <img className='mb-20' width={200} src={isOrderCompete ? "img/complete-order.svg" : "img/empty-box.png"} alt='empty-box' />
                             <h2>{isOrderCompete ? "Заказ оформлен" : "Корзина пустая"}</h2>
                             <p className='opacity-6'>{isOrderCompete ? "Ваш заказ #18 скоро будет передан курьерской доставке" : "Добавьте хотя бы один товар"}</p>
-                            <Link to="/react-sneakers">
+                            <Link to="/react-sneakers/">
                                 <button onClick={() => setOpenCard(false)} className='greenButton mb-50 pr-35'>
                                     <img className='mr-20' src='img/arrow.svg' alt='arrow' />
                                     Назад
