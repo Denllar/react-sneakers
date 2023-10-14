@@ -3,16 +3,27 @@ import style from "./Drawer.module.scss"
 import { Link } from 'react-router-dom'
 import AppContext from '../../context';
 import { useCart } from '../../hooks/useCart';
+import axios from 'axios';
 
 export default function Drawer({ closeDrawer, cartDrawer = [], onRemoveCart, opened }) {
     const [isOrderCompete, setIsOrderCompete] = React.useState(false)
-    const { setCart, totalPrice } = useCart();
+    const { setCart, cart, totalPrice } = useCart();
     const {setOpenCard} = React.useContext(AppContext)
     console.log(cartDrawer);
-    const onClickOrder = () => {
-        setIsOrderCompete(true)
-        setCart([])
+    const onClickOrder = async () => {
+        try {
+            setIsOrderCompete(true)
+            setCart([])
+            for (let i = 0; i < cart.length; i++) {
+                const item = cart[i];
+                await axios.delete(`https://64e77e85b0fd9648b790096d.mockapi.io/cart/${Number(item.key)}`)
+            }
+        } catch (error){
+            alert(error)
+            console.error(error)
+        }
     }
+    
     return (
         <div className={`${style.overlay} ${opened ? style.overlayVisible : ''}`}>
             <div className={style.drawer}>
