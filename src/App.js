@@ -175,7 +175,7 @@ function App() {
             }
           ></Route>
 
-          <Route path='favorites' exact element={
+          <Route path='/react-sneakers/favorites' exact element={
             <Favorites
               onAddToCart={onAddToCart}
               onAddToFavorites={onAddToFavorites}
@@ -183,7 +183,7 @@ function App() {
           }
           ></Route>
 
-          <Route path='orders' exact element={
+          <Route path='/react-sneakers/orders' exact element={
             <Orders
             />
           }
