@@ -7,6 +7,6 @@
 
 Stack:  
 » HTML&CSS / SCSS  
-» React
+» React  
 » JavaScript  
 » TypeScript
